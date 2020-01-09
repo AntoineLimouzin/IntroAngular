@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BindingService } from '../binding.service';
 
 @Component({
   selector: 'app-binding',
@@ -7,31 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingComponent implements OnInit {
 
-  comments = [];
+  comments = this.serv.getAllComments();
 
   comment = {
     date: null,
     message: ''
   };
 
-  constructor() { }
+  constructor(private serv: BindingService) { }
 
   ngOnInit() {
   }
 
   addComment(){
-
-    if (this.comment.message != '')
-    {
-      this.comment.date = new Date();
-      this.comments.push({
-        date: this.comment.date,
-        message: this.comment.message
-      });
-
+    if (this.comment.message !== ''){
+      this.serv.addComment({message: this.comment.message});
+      this.comments = this.serv.getAllComments();
       this.comment.message = '';
     }
-
   }
-
 }

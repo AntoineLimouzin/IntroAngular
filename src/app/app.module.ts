@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PremierComponent } from './premier/premier.component';
 import { BindingComponent } from './binding/binding.component';
+import { SqrtPipe } from './sqrt.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PremierComponent,
     BindingComponent,
+    SqrtPipe,
   ],
   imports: [
     BrowserModule,
