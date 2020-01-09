@@ -1,0 +1,50 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-6">
+
+			<div class="panel panel-primary">
+
+				<div class="panel-heading">
+					<h4>Ajout</h4>
+				</div>
+
+				<div class="panel-body">
+					<input [(ngModel)]="comment.message">
+					&nbsp;
+					<button (click)="addComment()" class="btn bg-primary spacer">
+						Ajouter
+					</button>
+				</div>
+
+			</div>
+
+		</div>
+		
+		<div class="col-md-6">
+
+			<div class="panel panel-primary">
+
+				<div class="panel-heading">
+					<h4>Liste</h4>
+				</div>
+
+				<div class="panel-body">
+					<div *ngIf="comments.length>0">
+						<h3>Liste coms</h3>
+							<ul>
+								<li *ngFor="let c of comments">
+									{{c.date}} : {{c.message}}
+								</li>
+							</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
