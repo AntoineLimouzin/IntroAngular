@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PremierComponent } from './premier/premier.component';
 import { BindingComponent } from './binding/binding.component';
 import { PixabayComponent } from './pixabay/pixabay.component';
+import { FiliereComponent } from './filiere/filiere.component';
 
 //définir les routes de mon projet
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
 {path: 'premier', component: PremierComponent},
 {path: 'binding', component: BindingComponent},
 {path: 'pixabay', component: PixabayComponent},
+{path: 'filiere', component: FiliereComponent},
 //déclaration de la route par défaut
 {
   path: '',

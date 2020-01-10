@@ -8,7 +8,8 @@ import { PremierComponent } from './premier/premier.component';
 import { BindingComponent } from './binding/binding.component';
 import { SqrtPipe } from './sqrt.pipe';
 import { HttpClientModule} from '@angular/common/http';
-import { PixabayComponent } from './pixabay/pixabay.component'
+import { PixabayComponent } from './pixabay/pixabay.component';
+import { FiliereComponent } from './filiere/filiere.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PixabayComponent } from './pixabay/pixabay.component'
     BindingComponent,
     SqrtPipe,
     PixabayComponent,
+    FiliereComponent,
   ],
   imports: [
     BrowserModule,
